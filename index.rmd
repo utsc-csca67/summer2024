@@ -1,0 +1,180 @@
+---
+title: "CSCA67-Winter 2025"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+source("./_aux/links_supplementary.R")
+source("./_aux/week01.R")
+source("./_aux/week02.R")
+source("./_aux/week03.R")
+source("./_aux/week04.R")
+source("./_aux/week05.R")
+source("./_aux/week06.R")
+source("./_aux/week07.R")
+source("./_aux/week08.R")
+source("./_aux/week09.R")
+source("./_aux/week10.R")
+source("./_aux/week11.R")
+source("./_aux/week12.R")
+source("./_aux/week13.R")
+source("./_aux/week14.R")
+source("./_aux/week15.R")
+```
+
+
+# **CSC(MAT)A67: Discrete Mathematics - Summer 2023**<br>Computer & Mathematical Science, University of Toronto Scarborough
+
+This course is designed as an *in-person* course aimed at introducing discrete mathematics, *e.g.*, elementary combinatorics and discrete probability including conditional probability and independence. The course emphasizes topics of relevance to computer science, and exercises problem-solving skills and proof techniques such as well ordering, induction, contradiction, and counterexample.
+
+All lectures will be recorded by the AuRA (Automated Recording Apparatus) service, and posted on the course page automatically within three hours. It uses an AI powered camera. As with all new technology, it would be foolish to rely on it. You should arrange for a classmate to share notes with you if you cannot attend a lecture.
+
+For your convenience, we also live-stream the lectures over [Zoom](`r zoom_lec_l`). See the corresponding announcement on Piazza for the passcode to join the Zoom room. Note that tutorials won't be recorded
+and won't be live-streamed.
+
+## Course Staff
+
+::: {#people .container .sec}
+::: {#shuffle-container .col}
+
+::: instructorphoto
+![Erfan Meskar<br>Instructor](./images/erfan_img3.png)
+:::
+::: instructorphoto
+![Madhu Gunasingam<br>TA](./images/empty.png)
+:::
+::: instructorphoto
+![Zahra Kazemi<br>TA](./images/empty.png)
+:::
+
+::: instructorphoto
+![Seyed Mohammad Sheikholeslami<br>TA](./images/empty.png)
+:::
+
+
+:::
+:::
+
+
+::: {#people .container .sec}
+::: {#shuffle-container .col}
+
+::: instructorphoto
+![Alina Buzila<br>TA](./images/empty.png)
+:::
+
+
+:::
+:::
+
+
+::: sechighlight
+::: {#logistics .container .sec}
+## Logistics
+- **Instructor:** Erfan Meskar ![Muhammad Hamza<br>TA](./images/erfan_email.jpg)
+- **Lectures:** you can attend the lectures both in-person and 
+over [Zoom](`r zoom_lec_l`).
+  - **Monday:** 3:00 PM - 5:00 PM, Room IC 220 2110.
+  - **Friday:** 2:00 PM - 3:00 PM, Room HL B101.
+- **Tutorials:** 
+  - **TUT0001:** Wednesday, 11:00 AM - 12:00 PM, Room IC 220 (*in-person only*)
+  - **TUT0002:** Wednesday, 4:00 PM - 5:00 PM, Room IC 326 (*in-person only*)
+  - **TUT0003:** Thursday, 10:00 AM - 11:00 AM, Room IC 120 (*in-person only*)
+  - **TUT0004:** Thursday, 5:00 PM - 6:00 PM, Room IC 320 (*in-person only*)
+- **Office hours:**
+  - Erfan Meskar (IC 402): Fridays 3:20 PM – 5:20 PM
+  - Madhu Gunasingam ([Zoom](https://utoronto.zoom.us/j/86491105607)): Mondays 1:30 PM - 2:30 PM
+  - Seyed Mohammad Sheikholeslami ([Zoom](https://utoronto.zoom.us/j/83810592356)): Tuesdays 9:00 AM - 10:00 AM
+  - Zahra Kazemi ([Zoom](https://utoronto.zoom.us/j/86527194152)): Wednesdays 5:00 PM - 6:00 PM
+  - Alina Buzila ([Zoom](https://utoronto.zoom.us/j/85947698810)): Thursdays 1:00 PM - 2:00 PM
+- **Contact**: 
+  - Students should ask *all* course-related questions in course Piazza 
+  channels. <br>
+  - For personal matters only, email instructor.
+-   **Announcements:** All announcements will be made in Piazza.
+:::
+:::
+
+
+::: {#coursework .container .sec}
+## Coursework
+  - **Assignments (15%)**
+    - There will be 6 assignments. The top 5 grades will contribute 15% to your final grade (each one is worth 3%).
+    - Assignments are to be solved and submitted individually to [Crowdmark](`r crowdmark_l`).
+    - Don't use any software or online tools (*e.g.*, WolframAlpha, ChatGPT, etc.) for solving weekly assignments.
+  - **Quizzes (10%)**
+    - There will be multiple pop quizzes. These quizzes will be published on Crowdmark during the lectures and are due by the end of the day.
+    - These quizzes will be graded based on a pass/fail grading system. The two lowest grade quizzes will be dropped and the remaining ones will contribute 10% to your final grade.
+    - Quizzes are to be solved and submitted individually to [Crowdmark](`r crowdmark_l`).
+  - **Term Tests (30%)**
+    - There will be two 2 equally weighted Term Tests.
+      - **Term Test 1:** 2024-06-14 (Friday, 2:10-3 PM, During lecture time, in class)
+      - **Term Test 2:** 2024-07-19 (Friday, 2:10-3 PM, During lecture time, in class)
+    - The lowest term test score will be replaced by the final exam score if the latter is greater than the former. For instance, if you get 25% on term test 1 (had a bad day!), 85% on term test 2, and 75% on the final exam, then a term test 1 score of 75% would be used to compute your course grade.
+    - There will be no make-up term tests. Exceptions are considered only for extraordinary and well documented reasons. Remedies for such exceptions may entail an oral test that is harder than the one that was missed.
+    - Term Tests are to be solved individually, without use of any device or aid (*i.e.*, the exams will be closed book and calculators and aid sheet are NOT allowed).
+  - **Final Exam (45%)**
+    - The final exam is closed book, comprehensive, 3 hours, and held during 
+    the exam period.
+    - Calculators and aid sheet are NOT allowed.
+
+All (currently tentative) deadlines are listed in the [schedule](#schedule). 
+Note that **due dates may change** based on how the course is progressing.
+:::
+
+::: {#submitting .container .sec}
+##  Submitting Coursework
+- Do not submit your coursework via email.
+- If anything goes wrong, please ask a question in Piazza or contact a course 
+assistant.
+- You can submit as many times as you'd like until the deadline: we will only 
+grade the last submission.
+- Partial work is better than not submitting any work.
+:::
+
+::: {#latedays .container .sec}
+## Late Days
+- Late assignment or quiz submissions will not be accepted, except where an accommodation has been granted by AccessAbility Services, or where there are legitimate reasons beyond a student’s control with sufficient supporting documents.
+:::
+
+::: {#sylremark .container .sec}
+## Regrade Requests
+
+Regrade requests for Programming Assignments, Problem Sets, Wireshark Labs, 
+and Midterm are due within 1 week of receiving the graded work and must be 
+submitted by posting a private note on Piazza.
+
+  - We ask that you carefully review your assignments, reflect, and write a 
+  short explanation justifying the reasons for a regrading request.
+  - If a grade is contested and we realize that the marker made a mistake in the
+  student's favour, the mark for that assignment may be lowered when the mistake
+  is found. This would otherwise create a situation which is unfair to other
+  students.
+  - Please include your full name and UTORid in the body of the private note.
+:::
+
+::: {#schedule .container .sec}
+
+## Course Schedule
+
+|Week | Topics        | Readings| Lecture note| Worksheets       | Coursework
+|:----|:--------------|:--------|:------------|:-----------------|:------------------------
+|1    | `r w01_top`      | `r w01_rea` | `r w01_sli`| `r w01_wsh`| `r w01_crw`               
+|2    | `r w02_top`      | `r w02_rea` | `r w02_sli`| `r w02_wsh`| `r w02_crw`  
+|3    | `r w03_top`      | `r w03_rea` | `r w03_sli`| `r w03_wsh`| `r w03_crw`              
+|4    | `r w04_top`      | `r w04_rea` | `r w04_sli`| `r w04_wsh`| `r w04_crw`             
+|5    | `r w05_top`      | `r w05_rea` | `r w05_sli`| `r w05_wsh`| `r w05_crw`              
+|6    | `r w06_top`      | `r w06_rea` | `r w06_sli`| `r w06_wsh`| `r w06_crw`
+|7    | `r w07_top`      | `r w07_rea` | `r w07_sli`| `r w07_wsh`| `r w07_crw`              
+|8    | `r w08_top`      | `r w08_rea` | `r w08_sli`| `r w08_wsh`| `r w08_crw`              
+|9    | `r w09_top`      | `r w09_rea` | `r w09_sli`| `r w09_wsh`| `r w09_crw`              
+|10   | `r w10_top`      | `r w10_rea` | `r w10_sli`| `r w10_wsh`| `r w10_crw`              
+|11   | `r w11_top`      | `r w11_rea` | `r w11_sli`| `r w11_wsh`| `r w11_crw` 
+|12   | `r w12_top`      | `r w12_rea` | `r w12_sli`| `r w12_wsh`| `r w12_crw` 
+|13   | `r w13_top`      | `r w13_rea` | `r w13_sli`| `r w13_wsh`| `r w13_crw` 
+|14   | `r w14_top`      | `r w14_rea` | `r w14_sli`| `r w14_wsh`| `r w14_crw` 
+|15   | `r w15_top`      | `r w15_rea` | `r w15_sli`| `r w15_wsh`| `r w15_crw` 
+
+
+:::

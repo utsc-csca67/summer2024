@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>CSCA67-Winter 2025</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link rel="icon" type="image/png" href="./images/favicon.png">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">CSC(MAT)A67</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html#schedule">Schedule</a>
+</li>
+<li>
+  <a href="index.html#coursework">Coursework</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Syllabus
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="syllabus.html">Overview</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syltextbook">Textbooks</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylassessment">Assessment and Deadlines</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylintegrity">Academic Integrity</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylplagiarism">Plagiarism Detection</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylconsent">Informed Consent – Email Lists</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylmissterm">Missed Term Work</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylremark">Remark Requests</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylaccommodations">Accommodations</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylspecconsider">Special Consideration</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syledi">Equity, Diversity and Inclusion</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syllec">Lectures</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syltut">Tutorials</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylannounce">Course Announcements</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syldisc">Discussion Board</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylcommunication">Communications</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylvid">Video Recording</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syllandack">University Land Acknowledgement</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://app.crowdmark.com">Crowdmark</a>
+</li>
+<li>
+  <a href="https://q.utoronto.ca/courses/348221">Quercus</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">CSCA67-Winter 2025</h1>
+
+</div>
+
+
+<div
+id="cscmata67-discrete-mathematics---summer-2023-computer-mathematical-science-university-of-toronto-scarborough"
+class="section level1">
+<h1><strong>CSC(MAT)A67: Discrete Mathematics - Summer
+2023</strong><br>Computer &amp; Mathematical Science, University of
+Toronto Scarborough</h1>
+<p>This course is designed as an <em>in-person</em> course aimed at
+introducing discrete mathematics, <em>e.g.</em>, elementary
+combinatorics and discrete probability including conditional probability
+and independence. The course emphasizes topics of relevance to computer
+science, and exercises problem-solving skills and proof techniques such
+as well ordering, induction, contradiction, and counterexample.</p>
+<p>All lectures will be recorded by the AuRA (Automated Recording
+Apparatus) service, and posted on the course page automatically within
+three hours. It uses an AI powered camera. As with all new technology,
+it would be foolish to rely on it. You should arrange for a classmate to
+share notes with you if you cannot attend a lecture.</p>
+<p>For your convenience, we also live-stream the lectures over <a
+href="https://utoronto.zoom.us/j/83250464222">Zoom</a>. See the
+corresponding announcement on Piazza for the passcode to join the Zoom
+room. Note that tutorials won’t be recorded and won’t be
+live-streamed.</p>
+<div id="course-staff" class="section level2">
+<h2>Course Staff</h2>
+<div id="people" class="container sec">
+<div id="shuffle-container" class="col">
+<div class="instructorphoto">
+<div class="float">
+<img src="images/erfan_img3.png" alt="Erfan Meskar Instructor" />
+<div class="figcaption">Erfan Meskar<br>Instructor</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Madhu Gunasingam TA" />
+<div class="figcaption">Madhu Gunasingam<br>TA</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Zahra Kazemi TA" />
+<div class="figcaption">Zahra Kazemi<br>TA</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Seyed Mohammad Sheikholeslami TA" />
+<div class="figcaption">Seyed Mohammad Sheikholeslami<br>TA</div>
+</div>
+</div>
+</div>
+</div>
+<div id="people" class="container sec">
+<div id="shuffle-container" class="col">
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Alina Buzila TA" />
+<div class="figcaption">Alina Buzila<br>TA</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sechighlight">
+<div id="logistics" class="section level2 container sec">
+<h2>Logistics</h2>
+<ul>
+<li><strong>Instructor:</strong> Erfan Meskar <img
+src="images/erfan_email.jpg" alt="Muhammad Hamza TA" /></li>
+<li><strong>Lectures:</strong> you can attend the lectures both
+in-person and over <a
+href="https://utoronto.zoom.us/j/83250464222">Zoom</a>.
+<ul>
+<li><strong>Monday:</strong> 3:00 PM - 5:00 PM, Room IC 220 2110.</li>
+<li><strong>Friday:</strong> 2:00 PM - 3:00 PM, Room HL B101.</li>
+</ul></li>
+<li><strong>Tutorials:</strong>
+<ul>
+<li><strong>TUT0001:</strong> Wednesday, 11:00 AM - 12:00 PM, Room IC
+220 (<em>in-person only</em>)</li>
+<li><strong>TUT0002:</strong> Wednesday, 4:00 PM - 5:00 PM, Room IC 326
+(<em>in-person only</em>)</li>
+<li><strong>TUT0003:</strong> Thursday, 10:00 AM - 11:00 AM, Room IC 120
+(<em>in-person only</em>)</li>
+<li><strong>TUT0004:</strong> Thursday, 5:00 PM - 6:00 PM, Room IC 320
+(<em>in-person only</em>)</li>
+</ul></li>
+<li><strong>Office hours:</strong>
+<ul>
+<li>Erfan Meskar (IC 402): Fridays 3:20 PM – 5:20 PM</li>
+<li>Madhu Gunasingam (<a
+href="https://utoronto.zoom.us/j/86491105607">Zoom</a>): Mondays 1:30 PM
+- 2:30 PM</li>
+<li>Seyed Mohammad Sheikholeslami (<a
+href="https://utoronto.zoom.us/j/83810592356">Zoom</a>): Tuesdays 9:00
+AM - 10:00 AM</li>
+<li>Zahra Kazemi (<a
+href="https://utoronto.zoom.us/j/86527194152">Zoom</a>): Wednesdays 5:00
+PM - 6:00 PM</li>
+<li>Alina Buzila (<a
+href="https://utoronto.zoom.us/j/85947698810">Zoom</a>): Thursdays 1:00
+PM - 2:00 PM</li>
+</ul></li>
+<li><strong>Contact</strong>:
+<ul>
+<li>Students should ask <em>all</em> course-related questions in course
+Piazza channels. <br></li>
+<li>For personal matters only, email instructor.</li>
+</ul></li>
+<li><strong>Announcements:</strong> All announcements will be made in
+Piazza.</li>
+</ul>
+</div>
+</div>
+<div id="coursework" class="section level2 container sec">
+<h2>Coursework</h2>
+<ul>
+<li><strong>Assignments (15%)</strong>
+<ul>
+<li>There will be 6 assignments. The top 5 grades will contribute 15% to
+your final grade (each one is worth 3%).</li>
+<li>Assignments are to be solved and submitted individually to <a
+href="https://crowdmark.com">Crowdmark</a>.</li>
+<li>Don’t use any software or online tools (<em>e.g.</em>, WolframAlpha,
+ChatGPT, etc.) for solving weekly assignments.</li>
+</ul></li>
+<li><strong>Quizzes (10%)</strong>
+<ul>
+<li>There will be multiple pop quizzes. These quizzes will be published
+on Crowdmark during the lectures and are due by the end of the day.</li>
+<li>These quizzes will be graded based on a pass/fail grading system.
+The two lowest grade quizzes will be dropped and the remaining ones will
+contribute 10% to your final grade.</li>
+<li>Quizzes are to be solved and submitted individually to <a
+href="https://crowdmark.com">Crowdmark</a>.</li>
+</ul></li>
+<li><strong>Term Tests (30%)</strong>
+<ul>
+<li>There will be two 2 equally weighted Term Tests.
+<ul>
+<li><strong>Term Test 1:</strong> 2024-06-14 (Friday, 2:10-3 PM, During
+lecture time, in class)</li>
+<li><strong>Term Test 2:</strong> 2024-07-19 (Friday, 2:10-3 PM, During
+lecture time, in class)</li>
+</ul></li>
+<li>The lowest term test score will be replaced by the final exam score
+if the latter is greater than the former. For instance, if you get 25%
+on term test 1 (had a bad day!), 85% on term test 2, and 75% on the
+final exam, then a term test 1 score of 75% would be used to compute
+your course grade.</li>
+<li>There will be no make-up term tests. Exceptions are considered only
+for extraordinary and well documented reasons. Remedies for such
+exceptions may entail an oral test that is harder than the one that was
+missed.</li>
+<li>Term Tests are to be solved individually, without use of any device
+or aid (<em>i.e.</em>, the exams will be closed book and calculators and
+aid sheet are NOT allowed).</li>
+</ul></li>
+<li><strong>Final Exam (45%)</strong>
+<ul>
+<li>The final exam is closed book, comprehensive, 3 hours, and held
+during the exam period.</li>
+<li>Calculators and aid sheet are NOT allowed.</li>
+</ul></li>
+</ul>
+<p>All (currently tentative) deadlines are listed in the <a
+href="#schedule">schedule</a>. Note that <strong>due dates may
+change</strong> based on how the course is progressing.</p>
+</div>
+<div id="submitting" class="container sec">
+<div id="submitting-coursework" class="section level2">
+<h2>Submitting Coursework</h2>
+<ul>
+<li>Do not submit your coursework via email.</li>
+<li>If anything goes wrong, please ask a question in Piazza or contact a
+course assistant.</li>
+<li>You can submit as many times as you’d like until the deadline: we
+will only grade the last submission.</li>
+<li>Partial work is better than not submitting any work.</li>
+</ul>
+</div>
+</div>
+<div id="latedays" class="container sec">
+<div id="late-days" class="section level2">
+<h2>Late Days</h2>
+<ul>
+<li>Late assignment or quiz submissions will not be accepted, except
+where an accommodation has been granted by AccessAbility Services, or
+where there are legitimate reasons beyond a student’s control with
+sufficient supporting documents.</li>
+</ul>
+</div>
+</div>
+<div id="sylremark" class="container sec">
+<div id="regrade-requests" class="section level2">
+<h2>Regrade Requests</h2>
+<p>Regrade requests for Programming Assignments, Problem Sets, Wireshark
+Labs, and Midterm are due within 1 week of receiving the graded work and
+must be submitted by posting a private note on Piazza.</p>
+<ul>
+<li>We ask that you carefully review your assignments, reflect, and
+write a short explanation justifying the reasons for a regrading
+request.</li>
+<li>If a grade is contested and we realize that the marker made a
+mistake in the student’s favour, the mark for that assignment may be
+lowered when the mistake is found. This would otherwise create a
+situation which is unfair to other students.</li>
+<li>Please include your full name and UTORid in the body of the private
+note.</li>
+</ul>
+</div>
+</div>
+<div id="schedule" class="container sec">
+<div id="course-schedule" class="section level2">
+<h2>Course Schedule</h2>
+<table>
+<colgroup>
+<col width="5%" />
+<col width="17%" />
+<col width="10%" />
+<col width="15%" />
+<col width="21%" />
+<col width="29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Week</th>
+<th align="left">Topics</th>
+<th align="left">Readings</th>
+<th align="left">Lecture note</th>
+<th align="left">Worksheets</th>
+<th align="left">Coursework</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">- Introduction and Logistics<br>- Propositional
+Logics<br>- Logical Equivalence</td>
+<td align="left">1.1<br>1.2<br>1.3</td>
+<td align="left">• Mon<br> - See the recorded video on Quercus<br>• <a
+href="./lec/W1_Fri.pdf">Fri</a></td>
+<td align="left">No Tutorial</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">- Propositional Functions and Quantifiers<br>- Nested
+Quantifiers<br>- Rules of Inference</td>
+<td align="left">1.4<br>1.5<br>1.6</td>
+<td align="left">• <a href="./lec/W2-Mon.pdf">Mon</a><br>• <a
+href="./lec/W2-Fri-part1.pdf">Fri - part 1</a><br>• <a
+href="./lec/W2-Fri-part2.pdf">Fri - part 2</a></td>
+<td align="left">- <strong>Sec. 1.1 exercises:</strong> 10(a,c,h), 22,
+34(b,c,f), 42<br>- <strong>Sec. 1.2 exercises:</strong> 5, 8(c,d), 19,
+20, 40<br>- <strong>Sec. 1.3 exercises:</strong> 8(c,d), 9c, 12(b),
+14(for 12.b), 36, 44</td>
+<td align="left">📢 <a href="./assignments/Q1.pdf">Quiz 1</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Monday,
+May 13, 11:59 PM<br>⏰ Quiz 1 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/A1.pdf">A1</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Sunday,
+May 26, 11:59 PM</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">- Introduction to Proofs</td>
+<td align="left">1.7</td>
+<td align="left">• Mon<br> - No class (Victoria Day)<br>• <a
+href="./lec/W3-Friday_Flattened.pdf">Fri</a></td>
+<td align="left">- <strong>Sec. 1.4 exercises:</strong> 5, 10(b,c,e),
+12, 36(b,c), 52, 54(b,c,d)<br>- <strong>Sec. 1.5 exercises:</strong>
+10(a,c,g,h,j), 11(a,d,f), 20(c), 24d,28(e,f), 30(c), 40(b)<br>-
+<strong>Sec. 1.6 exercises:</strong> 16(a,b), 24, 26</td>
+<td align="left">⏰ A1 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/Q2.pdf">Quiz 2</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Friday,
+May 24, 11:59 PM<br>⏰ Quiz 2 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/A2.pdf">A2</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Sunday,
+June 2, 11:59 PM</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">- More of Proof Methods<br>- Induction</td>
+<td align="left">1.8<br>5.1<br>5.2</td>
+<td align="left">• <a href="./lec/W4-Monday.pdf">Mon</a><br>• <a
+href="./lec/W4-Friday.pdf">Fri</a></td>
+<td align="left">- <strong>Sec. 1.7 exercises:</strong> 5, 7, 8, 9, 11,
+12, 15, 16, 18, 19, 21</td>
+<td align="left">⏰ A2 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/Q3.pdf">Quiz 3</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Friday,
+May 31, 11:59 PM<br>⏰ Quiz 3 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>A1 solution</strong></span> posted<br> 🔎
+Available on Piazza</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">- More Induction<br>- Review</td>
+<td align="left"></td>
+<td align="left">• Mon. (extra examples)<br> - solving <a
+href="./lec/W5_SampleTermTest1_annotated.pdf">sample term test
+1</a><br> - <a href="./lec/W5_ExtraExample.pdf">more induction</a><br>•
+Fri<br> - Reviewing <a href="./lec/W5-Mistakes.pdf">common mistakes</a>
+in proof writing</td>
+<td align="left">- <strong>Sec. 1.8 exercises:</strong> 2, 8-14, 17, 20,
+22, 28<br>- <strong>Sec. 5.1 exercises:</strong> 4, 6, 10, 18, 27, 49,
+50, 60<br>- <strong>Sec. 5.2 exercises:</strong> 4, 8, 10, 12, 16, 30,
+32</td>
+<td align="left">📢 <a href="./assignments/Q4.pdf">Quiz 4</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Monday,
+June 3, 11:59 PM<br>⏰ Quiz 4 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>A2 solution</strong></span> posted<br> 🔎
+Available on Piazza<br>- Q3 resubmission chance<br> - Carefully review
+our feedback on your initial Q3 submission. After addressing all
+concers, submit a revised version of your answer to Q3 and get a second
+chance!<br>📢 <a href="./exams/CSCA67-Summer24-sample_TT1.pdf">Sample
+Term Test 1</a> <span
+style="color: green;"><strong>out</strong></span><br>📬 <span
+style="color: orange;"><strong>Sample Term Test 1
+solution</strong></span> posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">- Sets and Functions<br> - Term Test 1</td>
+<td align="left">2.1<br>2.2<br>2.3</td>
+<td align="left">• <a href="./lec/W6_Monday.pdf">Mon</a><br>• Fri<br> -
+<strong>Term Test 1</strong></td>
+<td align="left">- <strong>Sec. 2.1 exercises:</strong> 6, 10-13, 20,
+22, 24, 25, 26, 33, 32, 36(a), 46(a,b)<br>- <strong>Sec. 2.2
+exercises:</strong> 2, 4, 16e, 22, 32, 34, 36, 38, 41, 42, 52<br>-
+<strong>Sec. 2.3 exercises:</strong> 2, 3, 4, 6(a), 8gh, 10, 14, 20, 23,
+32, 34(b), 36, 37,72</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">- Functions and Cardinality<br>- Modular
+Arithmetic</td>
+<td align="left">2.5<br>5.2.5<br>4.1<br>4.2</td>
+<td align="left">• <a href="./lec/W7-Monday.pdf">Mon</a><br>• Fri<br> -
+No class (Reading Week)</td>
+<td align="left">- <strong>Sec. 2.5 examples:</strong> Example 2,
+Example 4, Theorem 1, Example 6<br>- <strong>Sec. 2.5
+exercises:</strong> 1cdf, 2def, 3bd, 4acd, 5, 6, 7, 10, 16<br>-
+<strong>Sec. 4.1 exercises:</strong> 9, 10, 12, 16c, 18ace, 21, 22,
+44<br>- <strong>Sec. 4.2 exercises:</strong> 2c, 4b, 7d, 8, 28, 32,
+38</td>
+<td align="left">📢 <a href="./assignments/Q5.pdf">Quiz 5</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Monday,
+June 17, 11:59 PM<br>⏰ Quiz 5 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>Term Test 1 solution</strong></span>
+posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">- Modular Arithmetic<br>- gcd</td>
+<td align="left">4.2<br>4.3<br>4.4<br>5.2.4</td>
+<td align="left">• <a href="./lec/W8_Monday.pdf">Mon</a><br>• Fri<br> -
+No class (Presidential Day)</td>
+<td align="left">- <strong>Sec. 4.3 exercises:</strong> 4f, 6, 9, 10,
+12, 18, 25ef, 30, 32ef, 39hi<br>- <strong>Sec. 5.1 exercises:</strong>
+64<br>- <strong>Sec. 5.2 exercises:</strong> 36, 38</td>
+<td align="left">📢 <a href="./assignments/Q6.pdf">Quiz 6</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Monday,
+June 24, 11:59 PM<br>⏰ Quiz 6 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/A3.pdf">A3</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Sunday,
+July 7, 11:59 PM</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">- Recurrence<br>- Counting</td>
+<td align="left">5.3<br>6.1</td>
+<td align="left">• Mon<br> - No class (Canada Day)<br>• <a
+href="./lec/W9_Fri.pdf">Fri</a></td>
+<td align="left">- <strong>Sec. 2.4 exercises:</strong> 4, 5fg, 6bdf,
+10bd, 16ab, 18, 22</td>
+<td align="left">⏰ A3 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/Q7.pdf">Quiz 7</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Friday,
+July 5, 11:59 PM<br>⏰ Quiz 7 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/A4.pdf">A4</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Sunday,
+July 14, 11:59 PM</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">- Counting Rules (Sum Rule, Subtraction Rule, Division
+Rule)<br>- Binomial Coefficient<br>- Combinatorial Identities<br>-
+Generalized Permutations and Combinations</td>
+<td align="left">6.1<br>6.3<br>6.4<br>6.5</td>
+<td align="left">• <a href="./lec/W10_Mon.pdf">Mon</a><br>• <a
+href="./lec/W10_Fri_annot.pdf">Fri</a></td>
+<td align="left">- <strong>Sec. 6.1 exercises:</strong> 8, 16, 22, 32,
+40, 46, 48, 68<br>- <strong>Sec. 6.3 exercises:</strong> 9, 12, 13, 14,
+22, 24, 28, 43, 26, 34<br>- <strong>Sec. 6.4 exercises:</strong> 8,
+12ace, 14, 19, 24, 25, 26, 28, 18, 32</td>
+<td align="left">⏰ A4 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/Q8.pdf">Quiz 8</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Friday,
+July 12, 11:59 PM<br>⏰ Quiz 8 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>A3 solution</strong></span> posted<br> 🔎
+Available on Piazza<br>📢 <a
+href="./exams/CSCA67-Summer24-TT2_Sample.pdf">Sample Term Test 2</a>
+<span style="color: green;"><strong>out</strong></span><br>📬 <span
+style="color: orange;"><strong>Sample Term Test 2
+solution</strong></span> posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">- Generalized Permutations and Combinations<br>
+-Putting Objects in Boxes<br> -Pigeon Hole Principle<br> -Term Test 2 on
+Friday</td>
+<td align="left">6.2<br>6.5</td>
+<td align="left">• <a href="./lec/W11_Mon_annot.pdf">Mon</a><br>•
+Fri<br> - <strong>Term Test 2</strong></td>
+<td align="left">- <strong>Sec. 6.2 exercises:</strong> 6, 14, 18, 28,
+33, 42, 16, 36<br>- <strong>Sec. 6.5 exercises:</strong> 4, 10, 11, 15,
+18, 20, 24, 26, 34, 14, 22, 32, 36, 44</td>
+<td align="left">📬 <span style="color: orange;"><strong>A4
+solution</strong></span> posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="left">- Classical Probability<br>- A More Accurate Study of
+Probability, <em>i.e.</em>, Probability Spaces</td>
+<td align="left">7.1<br>7.2</td>
+<td align="left">• <a href="./lec/W12_Mon.pdf">Mon</a><br>• <a
+href="./lec/W12_Fri.pdf">Fri</a></td>
+<td align="left">- <strong>Sec. 7.1 exercises:</strong> 6, 8, 12, 16,
+24, 31, 34, 20, 30, 36, 42(b,c), 44<br>- <strong>Sec. 7.2
+exercises:</strong> 5, 6, 8, 11, 13, 17, 20, 12, 16, 14, 18, 24, 34</td>
+<td align="left">📢 <a href="./assignments/Q9.pdf">Quiz 9</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Monday,
+July 22, 11:59 PM<br>⏰ Quiz 9 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/Q10.pdf">Quiz 10</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Friday,
+July 26, 11:59 PM<br>⏰ Quiz 10 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/A5.pdf">A5</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on
+Wednesday, July 31, 11:59 PM</td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="left">- Independence of Events<br>- Random Variables<br>-
+Linearity of Expectation<br>- Distribution<br>- Independence of Random
+Variables</td>
+<td align="left">7.3,<br>7.4.1<br>7.4.2<br>7.4.3<br>7.4.4<br>7.4.5</td>
+<td align="left">• <a href="./lec/W13_Mon.pdf">Mon</a><br>• <a
+href="./lec/W13_Fri_annot.pdf">Fri</a></td>
+<td align="left">- <strong>Sec. 7.3 exercises:</strong> 3, 4, 6, 8, 12,
+16<br>- <strong>Sec. 7.4 exercises:</strong> 6, 8, 10, 12, 15, 16, 25,
+26, 48</td>
+<td align="left">⏰ A5 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/Q11.pdf">Quiz 11</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Monday,
+July 29, 11:59 PM<br>⏰ Quiz 11 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/Q12.pdf">Quiz 12</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Friday,
+August 2, 11:59 PM<br>⏰ Quiz 12 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/A6.pdf">A6</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on
+Wednesday, August 7, 11:59 PM</td>
+</tr>
+<tr class="even">
+<td align="left">14</td>
+<td align="left">- Algebra of Random Variables<br>- Advanced Counting
+Techniques<br>- Review</td>
+<td align="left">7.4.6<br>8.1<br>8.5<br>8.6</td>
+<td align="left">• Mon<br> - No class (Civic Holiday)<br>• <a
+href="./lec/W14-Mon.pdf">Tue</a><br> - Make up session for July 1<br>•
+Wed<br> - Review &amp; Farewell<br> - Make up session for June 28</td>
+<td align="left">No Tutorial</td>
+<td align="left">⏰ A6 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/Q13.pdf">Quiz 13</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Friday,
+August 9, 11:59 PM<br>⏰ Quiz 13 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>A5 solution</strong></span> posted<br> 🔎
+Available on Piazza</td>
+</tr>
+<tr class="odd">
+<td align="left">15</td>
+<td align="left">Final Exam Break</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">📬 <span style="color: orange;"><strong>A6
+solution</strong></span> posted<br> 🔎 Available on Piazza<br>📢 <a
+href="./exams/CSCA67-Summer24-Final-Sample.pdf">Sample Final</a> <span
+style="color: green;"><strong>out</strong></span><br>📬 <span
+style="color: orange;"><strong>Sample Final solution</strong></span>
+posted<br> 🔎 Available on Piazza</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Syllabus</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link rel="icon" type="image/png" href="./images/favicon.png">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">CSC(MAT)A67</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html#schedule">Schedule</a>
+</li>
+<li>
+  <a href="index.html#coursework">Coursework</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Syllabus
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="syllabus.html">Overview</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syltextbook">Textbooks</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylassessment">Assessment and Deadlines</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylintegrity">Academic Integrity</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylplagiarism">Plagiarism Detection</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylconsent">Informed Consent – Email Lists</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylmissterm">Missed Term Work</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylremark">Remark Requests</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylaccommodations">Accommodations</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylspecconsider">Special Consideration</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syledi">Equity, Diversity and Inclusion</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syllec">Lectures</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syltut">Tutorials</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylannounce">Course Announcements</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syldisc">Discussion Board</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylcommunication">Communications</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylvid">Video Recording</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syllandack">University Land Acknowledgement</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://app.crowdmark.com">Crowdmark</a>
+</li>
+<li>
+  <a href="https://q.utoronto.ca/courses/348221">Quercus</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Syllabus</h1>
+
+</div>
+
+
+<div id="course-syllabus" class="section level1">
+<h1>Course Syllabus</h1>
+<div id="overview" class="container sec">
+<div id="course-learning-outcomes" class="section level2">
+<h2>Course Learning Outcomes</h2>
+<p>The course introduces fundamental tools in mathematics and computer
+science that are crucial for subsequent studies, work, and research.
+Among the topics that will be studied:</p>
+<ul>
+<li>How to communicate clearly and concisely (mathematical language):
+Propositional logic, set theory, operations on formulae and on
+sets.</li>
+<li>How to count (combinatorics and discrete probability): Combinations
+and permutations, notions in discrete probability, conditional
+probability, independence, linearity of expectation.</li>
+</ul>
+<p>The exercises in the course emphasize problem-solving and
+mathematical rigor. We will also practice proof techniques such as
+induction, contradiction, and counter-example.</p>
+<ul>
+<li><strong>Prerequisites:</strong> Grade 12 Calculus and Vectors and
+one other Grade 12 mathematics course</li>
+<li><strong>Corequisites:</strong> None</li>
+<li><strong>Exclusions:</strong> MATA67H3, (CSCA65H3), CSC165H, CSC240H,
+MAT102H</li>
+<li><strong>Recommended Preparation:</strong> CSCA08H3 or CSCA20H3</li>
+<li><strong>Credit Value:</strong> 0.5</li>
+</ul>
+</div>
+</div>
+<div id="syltextbook" class="container sec">
+<div id="textbooks" class="section level2">
+<h2>Textbooks</h2>
+<p>Discrete Mathematics and Its Applications, 8th edition, Kenneth
+Rosen, 2019, McGraw-Hill Education</p>
+</div>
+</div>
+<div id="sylassessment" class="container sec">
+<div id="assessment-and-deadlines" class="section level2">
+<h2>Assessment and Deadlines</h2>
+<ul>
+<li><strong>Assignments (15%)</strong>
+<ul>
+<li>There will be 6 assignments. The top 5 grades will contribute 15% to
+your final grade (each one is worth 3%).</li>
+<li>Assignments are to be solved and submitted individually to <a
+href="https://crowdmark.com">Crowdmark</a>.</li>
+<li>Don’t use any software or online tools (<em>e.g.</em>, WolframAlpha,
+ChatGPT, etc.) for solving weekly assignments.</li>
+</ul></li>
+<li><strong>Quizzes (10%)</strong>
+<ul>
+<li>There will be multiple pop quizzes. These quizzes will be published
+on Crowdmark during the lectures and are due by the end of the day.</li>
+<li>These quizzes will be graded based on a pass/fail grading system.
+The two lowest grade quizzes will be dropped and the remaining ones will
+contribute 10% to your final grade.</li>
+<li>Quizzes are to be solved and submitted individually to <a
+href="https://crowdmark.com">Crowdmark</a>.</li>
+</ul></li>
+<li><strong>Term Tests (30%)</strong>
+<ul>
+<li>There will be two 2 equally weighted Term Tests.
+<ul>
+<li><strong>Term Test 1:</strong> 2024-06-14 (Friday, 2:10-3 PM, During
+lecture time, in class)</li>
+<li><strong>Term Test 2:</strong> 2024-07-19 (Friday, 2:10-3 PM, During
+lecture time, in class)</li>
+</ul></li>
+<li>The lowest term test score will be replaced by the final exam score
+if the latter is greater than the former. For instance, if you get 25%
+on term test 1 (had a bad day!), 85% on term test 2, and 75% on the
+final exam, then a term test 1 score of 75% would be used to compute
+your course grade.</li>
+<li>There will be no make-up term tests. Exceptions are considered only
+for extraordinary and well documented reasons. Remedies for such
+exceptions may entail an oral test that is harder than the one that was
+missed.</li>
+<li>Term Tests are to be solved individually, without use of any device
+or aid (<em>i.e.</em>, the exams will be closed book and calculators and
+aid sheet are NOT allowed).</li>
+</ul></li>
+<li><strong>Final Exam (45%)</strong>
+<ul>
+<li>The final exam is closed book, comprehensive, 3 hours, and held
+during the exam period.</li>
+<li>Calculators and aid sheet are NOT allowed.</li>
+</ul></li>
+</ul>
+<p>All (currently tentative) deadlines are listed in the <a
+href="#schedule">schedule</a>. Note that <strong>due dates may
+change</strong> based on how the course is progressing.</p>
+</div>
+</div>
+<div id="sylintegrity" class="container sec">
+<div id="academic-integrity" class="section level2">
+<h2>Academic Integrity</h2>
+<p>The University treats cases of cheating and plagiarism very
+seriously. The University of Toronto’s <a
+href="http://www.governingcouncil.utoronto.ca/policies/behaveac.htm">Code
+of Behaviour on Academic Matters</a> outlines the behaviours that
+constitute academic dishonesty and the processes for addressing academic
+offences.</p>
+<p>Potential offences in papers and assignments include using someone
+else’s ideas or words without appropriate acknowledgement, submitting
+your own work in more than one course without the permission of the
+instructor, making up sources or facts, obtaining or providing
+unauthorized assistance on any assignment.</p>
+<p>On tests and exams, cheating includes using or possessing
+unauthorized aids, looking at someone else’s answers during an exam or
+test, misrepresenting your identity, or falsifying or altering any
+documentation required by the University.</p>
+<p>All of the work you submit must be done by you, and your work must
+not be submitted by someone else. Plagiarism is academic fraud and is
+taken very seriously. The department uses software that compares
+programs for evidence of similar code. Please read the Rules and
+Regulations from the U of T Governing Council, especially the Code of
+Behaviour on Academic Matters.</p>
+<p>Please also see the information for students from the Office of
+Student Academic Integrity.</p>
+<p>Please don’t copy. We want you to succeed and are here to help. The
+simplest advice for avoiding plagiarism is:</p>
+<ul>
+<li><p>Never look at another student’s assignment solution, whether it
+is on paper or on the computer screen. Never show another student your
+assignment solution. This applies to all drafts of a solution and to
+incomplete solutions.</p></li>
+<li><p>If you find code/help/solution on the web that solves part or all
+of an assignment, do not use or submit any part of it. A large
+percentage of the academic offences in CS involve students who have
+never met, and who just happened to find the same solution online. If
+you find a solution, someone else will too.</p></li>
+<li><p>Be very careful when engaging “tutoring services”. In previous
+years, we had students suspended from the university as a result of
+submitting work that was done with the “help” of such “tutors”. When in
+doubt whether a tutoring company is offering real teaching or is helping
+students cheat, do not hesitate to ask your instructor — we are here to
+help!</p></li>
+</ul>
+</div>
+</div>
+<div id="sylplagiarism" class="container sec">
+<div id="plagiarism-detection" class="section level2">
+<h2>Plagiarism Detection</h2>
+<p>Normally, students will be required to submit their course essays to
+the University’s plagiarism detection tool for a review of textual
+similarity and detection of possible plagiarism. In doing so, students
+will allow their essays to be included as source documents in the tool’s
+reference database, where they will be used solely for the purpose of
+detecting plagiarism. The terms that apply to the University’s use of
+this tool are described on the <a
+href="https://teaching.utoronto.ca/resources/plagiarism-detection/">Centre
+for Teaching Support &amp; Innovation</a> web site.</p>
+<p>Students may wish to opt out of using the plagiarism detection tool.
+In order to opt out, contact your instructor by email no later than two
+(2) weeks after the start of classes. If you have opted out, then
+specific information on an alternative method to submit your assignment
+can be found below.</p>
+</div>
+</div>
+<div id="sylconsent" class="container sec">
+<div id="informed-consent-email-lists" class="section level2">
+<h2>Informed Consent – Email Lists</h2>
+<p>As a student enrolled in this course, you understand that you are
+providing your implicit consent to be included in an email list for the
+department to send you non-essential information from time to time. If
+you do not wish to be included in such an email list, please request to
+be removed by contacting one of the Academic Advisors &amp;
+Undergraduate Program Administrators. Their information can be found on
+the MCS Website Contact Us <a
+href="https://www.utm.utoronto.ca/math-cs-stats/contact-us-outreach">page</a>.</p>
+</div>
+</div>
+<div id="sylmissterm" class="container sec">
+<div id="missed-term-work" class="section level2">
+<h2>Missed Term Work</h2>
+<p>In general, if work is missed due to an emergency situation, then the
+weight of the work will be placed on other similar components in the
+course. For example, a missed term test would add to the weight of the
+final exam, and a missed assignment would add to the weight of a later
+assignment. Exact accommodation will be discussed between the student
+and the instructor, who must be informed within 72 hours of the due
+date.</p>
+</div>
+</div>
+<div id="sylremark" class="container sec">
+<div id="remark-requests" class="section level2">
+<h2>Remark Requests</h2>
+<p>Remark requests are due within 1 week of receiving the graded work
+and must be submitted by posting a private note on Piazza.</p>
+<ul>
+<li>We ask that you carefully review your assignments, reflect, and
+write a short explanation justifying the reasons for a regrading
+request.</li>
+<li>If a grade is contested and we realize that the marker made a
+mistake in the student’s favour, the mark for that assignment may be
+lowered when the mistake is found. This would otherwise create a
+situation which is unfair to other students.</li>
+<li>Please include your full name and UTORid in the body of the private
+note.</li>
+</ul>
+</div>
+</div>
+<div id="sylaccommodations" class="container sec">
+<div id="accommodations" class="section level2">
+<h2>Accommodations</h2>
+<p>Students with diverse learning styles and needs are welcome in this
+course. In particular, if you have a disability/health consideration
+that may require accommodations, please feel free to approach me and/or
+the AccessAbility Services Office as soon as possible.</p>
+<p>AccessAbility Services staff (located in Rm AA142, Arts and
+Administration Building) are available by appointment to assess specific
+needs, provide referrals and arrange appropriate accommodations
+416-287-7560 or email <a href="mailto:ability.utsc@utoronto.ca"
+class="email">ability.utsc@utoronto.ca</a>. The sooner you let us know
+your needs the quicker we can assist you in achieving your learning
+goals in this course.</p>
+</div>
+</div>
+<div id="sylspecconsider" class="container sec">
+<div id="special-consideration" class="section level2">
+<h2>Special Consideration</h2>
+<p>Please contact us immediately if you cannot complete coursework or
+miss a test due to a major illness or other circumstances outside your
+control. Special consideration will be evaluated on a case-by-case basis
+and is not given automatically. We may be unable to grant you exactly
+the special consideration you seek, so please ensure we have time to
+discuss your situation.</p>
+<p>In order to receive special consideration, you must fill out a
+Request for Special Consideration Form. Submit the form in PDF format as
+soon as possible, together with any supporting documentation, to the
+course instructor’s email address.</p>
+<p>You can contact us (by email using the course instructor’s email
+address) even before you have your documentation ready to submit; we
+won’t be able to tell you at that point what accommodation you may
+receive, but we can answer other questions and offer advice. It is
+always easier to resolve situations earlier rather than later. If you
+face a particularly disruptive situation that is likely to impact more
+than one course, please contact your College Registrar. They are best
+equipped to provide you with general advice and support that goes beyond
+a single course.</p>
+</div>
+</div>
+<div id="syledi" class="container sec">
+<div id="equity-diversity-and-inclusion" class="section level2">
+<h2>Equity, Diversity and Inclusion</h2>
+<p>The University of Toronto is committed to equity, human rights and
+respect for diversity. All members of the learning environment in this
+course should strive to create an atmosphere of mutual respect where all
+members of our community can express themselves, engage with each other,
+and respect one another’s differences. U of T does not condone
+discrimination or harassment against any persons or communities.</p>
+<p>The University of Toronto is a richly diverse community and as such
+is committed to providing an environment free of any form of harassment,
+misconduct, or discrimination. In this course, I seek to foster a civil,
+respectful, and open-minded climate in which we can all work together to
+develop a better understanding of key questions and debates through
+meaningful dialogue. As such, I expect all involved with this course to
+refrain from actions or behaviours that intimidate, humiliate, or demean
+persons or groups or that undermine their security or self-esteem based
+on traits related to race, religion, ancestry, place of origin, colour,
+ethnic origin, citizenship, creed, sex, sexual orientation, gender
+identity, gender expression, age, marital status, family status,
+disability, receipt of public assistance or record of offences.</p>
+</div>
+</div>
+<div id="syllec" class="container sec">
+<div id="lectures" class="section level2">
+<h2>Lectures</h2>
+<p>You are expected to attend lecture every week. Lectures will be
+recorded by the AuRA (Auto-mated Recording Apparatus) service. It uses
+an AI powered camera. As with all new technoogy, it would be foolish to
+rely on it. You should arrange for a classmate to share notes with you
+if you cannot attend a lecture.</p>
+</div>
+</div>
+<div id="syltut" class="container sec">
+<div id="tutorials" class="section level2">
+<h2>Tutorials</h2>
+<p>You are expected to attend your assigned tutorial every week.
+Tutorials will not be recorded. You should arrange for a classmate to
+share notes with you if you cannot attend a tutorial.</p>
+</div>
+</div>
+<div id="sylannounce" class="container sec">
+<div id="course-announcements" class="section level2">
+<h2>Course Announcements</h2>
+<p>All course announcements will be posted on Piazza. You are
+responsible for reading all postings made by the instructor or the TAs
+on Piazza and for being familiar with the entire content of this
+Syllabus; please take a few minutes at the beginning of the term to read
+through the entire Syllabus.</p>
+</div>
+</div>
+<div id="syldisc" class="container sec">
+<div id="discussion-board" class="section level2">
+<h2>Discussion Board</h2>
+<ul>
+<li>For all questions of general interest (whose answers are likely to
+be useful to other students, e.g., about the course material,
+assignments, general questions about course logistics and
+administration), where you can ask the question while respecting the
+academic integrity of the course (without revealing any idea or part of
+a solution to a course assessment), please start a new topic directly on
+the Piazza discussion forum, so that everyone can benefit from reading
+your questions and the associated answers. We will monitor the forum
+regularly, but feel free to answer questions from other students, too!
+Helping someone else learn is one of the most effective ways to master a
+subject.</li>
+<li>For personal questions (making appointments, remarking requests,
+etc.), please email the course instructor directly from your University
+of Toronto email address. Please include “A67” in the subject line and
+your full name and UTORid in the body of the email. Otherwise, your
+message might be marked as spam!</li>
+</ul>
+</div>
+</div>
+<div id="sylcommunication" class="container sec">
+<div id="communications" class="section level2">
+<h2>Communications</h2>
+<p>It is the student’s responsibility to:</p>
+<ul>
+<li>Maintain current contact information with the University, including
+address, phone numbers, and emergency contact information.</li>
+<li>Use the university-provided e-mail address or maintain a valid
+forwarding e-mail address.</li>
+<li>Regularly check the official University communications channels.
+Official University communications are considered received if sent by
+postal mail, fax, or e-mail to the student’s designated primary e-mail
+account via their <span class="citation">@utoronto.ca</span> alias.</li>
+<li>Accept that forwarded e-mails may be lost and that e-mail is
+considered received if sent via the student’s <span
+class="citation">@utoronto.ca</span> alias.</li>
+<li>Check the UofT/Quercus email and course websites on a regular basis
+during the term. Further, check the discussion board daily for any
+course updates/announcements.</li>
+<li>Read and keep current with the discussions on the discussion
+board.</li>
+</ul>
+</div>
+</div>
+<div id="sylvid" class="container sec">
+<div id="video-recording-and-sharing-download-and-re-use-prohibited"
+class="section level2">
+<h2>Video Recording and Sharing (Download and Re-use Prohibited)</h2>
+<p>This course, including your participation, will be recorded on video
+and will be available to students in the course for viewing remotely and
+after each session.</p>
+<p>Course videos and materials belong to your instructor, the
+University, and/or other sources depending on the specific facts of each
+situation and are protected by copyright. Do not download, copy, or
+share any course or student materials or videos without the explicit
+permission of the instructor.</p>
+<p>For questions about the recording and use of videos in which you
+appear, please contact your instructor.</p>
+</div>
+</div>
+<div id="syllandack" class="container sec">
+<div id="university-land-acknowledgement" class="section level2">
+<h2>University Land Acknowledgement</h2>
+<p>I wish to acknowledge this land on which the University of Toronto
+operates. For thousands of years, it has been the traditional land of
+the Huron-Wendat, the Seneca, and the Mississaugas of the Credit. Today,
+this meeting place is still the home to many Indigenous people from
+across Turtle Island and we are grateful to have the opportunity to work
+on this land.</p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
