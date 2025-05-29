@@ -1,5 +1,5 @@
 ---
-title: "CSCA67-Winter 2025"
+title: "CSC(MAT)A67 - Summer 2025"
 output: html_document
 ---
 
@@ -24,7 +24,15 @@ source("./_aux/week15.R")
 ```
 
 
-# **CSC(MAT)A67: Discrete Mathematics - Summer 2023**<br>Computer & Mathematical Science, University of Toronto Scarborough
+::: {#header}
+<span class="header-title">`r course_code`: `r course_full_name`<br></span>
+<span class="header-subtitle">`r university`<br>`r department`<br>`r season` `r year`</span>
+
+::: {#header-image .img}
+![](./images/favicon.png)
+::: 
+:::
+
 
 This course is designed as an *in-person* course aimed at introducing discrete mathematics, *e.g.*, elementary combinatorics and discrete probability including conditional probability and independence. The course emphasizes topics of relevance to computer science, and exercises problem-solving skills and proof techniques such as well ordering, induction, contradiction, and counterexample.
 
@@ -35,8 +43,7 @@ and won't be live-streamed.
 
 ## Course Staff
 
-::: {#people .container .sec}
-::: {#shuffle-container .col}
+::: {#shuffleleft-container .col .sec}
 
 ::: instructorphoto
 ![Erfan Meskar<br>Instructor](./images/erfan_img3.png)
@@ -47,25 +54,14 @@ and won't be live-streamed.
 ::: instructorphoto
 ![Zahra Kazemi<br>TA](./images/empty.png)
 :::
-
 ::: instructorphoto
-![Seyed Mohammad Sheikholeslami<br>TA](./images/empty.png)
+![Seyed Mohammad Sheikholeslami<br>TA](./images/mohammad.jpeg)
 :::
-
-
-:::
-:::
-
-
-::: {#people .container .sec}
-::: {#shuffle-container .col}
-
 ::: instructorphoto
 ![Alina Buzila<br>TA](./images/empty.png)
 :::
 
 
-:::
 :::
 
 
@@ -143,7 +139,7 @@ grade the last submission.
 
 Regrade requests for Programming Assignments, Problem Sets, Wireshark Labs, 
 and Midterm are due within 1 week of receiving the graded work and must be 
-submitted by posting a private note on Piazza.
+submitted by posting a private question on Piazza.
 
   - We ask that you carefully review your assignments, reflect, and write a 
   short explanation justifying the reasons for a regrading request.

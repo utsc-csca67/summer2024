@@ -1,5 +1,5 @@
 ---
-title: "Syllabus"
+title: "CSC(MAT)A67 - Syllabus"
 output: html_document
 ---
 
@@ -59,6 +59,12 @@ The exercises in the course emphasize problem-solving and mathematical rigor. We
 All (currently tentative) deadlines are listed in the [schedule](#schedule). 
 Note that **due dates may change** based on how the course is progressing.
 :::
+
+::: {#latedays .container .sec}
+## Late Days
+- Late assignment or quiz submissions will not be accepted, except where an accommodation has been granted by AccessAbility Services, or where there are legitimate reasons beyond a student’s control with sufficient supporting documents.
+:::
+
 
 ::: {#sylintegrity .container .sec}
 ## Academic Integrity
