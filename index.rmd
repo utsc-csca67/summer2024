@@ -68,7 +68,7 @@ and won't be live-streamed.
 ::: sechighlight
 ::: {#logistics .container .sec}
 ## Logistics
-- **Instructor:** Erfan Meskar ![Muhammad Hamza<br>TA](./images/erfan_email.jpg)
+- **Instructor:** Erfan Meskar ![Erfan's Email](./images/erfan_email.jpg)
 - **Lectures:** you can attend the lectures both in-person and 
 over [Zoom](`r zoom_lec_l`).
   - **Monday:** 3:00 PM - 5:00 PM, Room IC 220.
@@ -154,8 +154,8 @@ submitted by posting a private question on Piazza.
 
 ## Course Schedule
 
-|Week | Topics        | Readings| Lecture note| Worksheets       | Coursework
-|:----|:--------------|:--------|:------------|:-----------------|:------------------------
+|Week | Topics        | Readings| Lecture Notes| Tutorial       | Coursework
+|:----|:--------------|:--------|:-------------|:-----------------|:------------------------
 |1    | `r w01_top`      | `r w01_rea` | `r w01_sli`| `r w01_wsh`| `r w01_crw`               
 |2    | `r w02_top`      | `r w02_rea` | `r w02_sli`| `r w02_wsh`| `r w02_crw`  
 |3    | `r w03_top`      | `r w03_rea` | `r w03_sli`| `r w03_wsh`| `r w03_crw`              
