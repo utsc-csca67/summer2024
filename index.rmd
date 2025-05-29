@@ -71,7 +71,7 @@ and won't be live-streamed.
 - **Instructor:** Erfan Meskar ![Muhammad Hamza<br>TA](./images/erfan_email.jpg)
 - **Lectures:** you can attend the lectures both in-person and 
 over [Zoom](`r zoom_lec_l`).
-  - **Monday:** 3:00 PM - 5:00 PM, Room IC 220 2110.
+  - **Monday:** 3:00 PM - 5:00 PM, Room IC 220.
   - **Friday:** 2:00 PM - 3:00 PM, Room HL B101.
 - **Tutorials:** 
   - **TUT0001:** Wednesday, 11:00 AM - 12:00 PM, Room IC 220 (*in-person only*)
