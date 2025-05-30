@@ -68,7 +68,7 @@ and won't be live-streamed.
 ::: sechighlight
 ::: {#logistics .container .sec}
 ## Logistics
-- **Instructor:** Erfan Meskar ![Erfan's Email](./images/erfan_email.jpg)
+- **Instructor:** Erfan Meskar (e.meskar@utoronto.ca)
 - **Lectures:** you can attend the lectures both in-person and 
 over [Zoom](`r zoom_lec_l`).
   - **Monday:** 3:00 PM - 5:00 PM, Room IC 220.
@@ -137,8 +137,8 @@ grade the last submission.
 ::: {#sylremark .container .sec}
 ## Regrade Requests
 
-Regrade requests for Programming Assignments, Problem Sets, Wireshark Labs, 
-and Midterm are due within 1 week of receiving the graded work and must be 
+Regrade requests for Assignments, Quizzes, 
+and Term Tests are due within 1 week of receiving the graded work and must be 
 submitted by posting a private question on Piazza.
 
   - We ask that you carefully review your assignments, reflect, and write a 
